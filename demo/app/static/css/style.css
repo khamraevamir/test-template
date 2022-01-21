@@ -91,6 +91,47 @@
 }
 
 
+/* Settings */
+
+
+
+.settings-page .left {
+    width: 22%;
+}
+
+.settings-page .right {
+    width: 78%;
+}
+
+.settings-page .settings-sidebar li .active {
+    background: var(--ocean--) !important;
+    color: var(--light--) !important;
+}
+
+
+.settings-page .settings-sidebar li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.settings-page .settings-sidebar li:first-child a {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+
+.settings-page .settings-sidebar li:last-child a {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.settings-page .settings-sidebar li a:hover{
+    background: var(--light--);
+}
+
+
+
 
 
 
@@ -101,6 +142,12 @@
         margin: 0 auto;
     }
 
+
+    .settings-page .settings-sidebar li a {
+        display: flex;
+        align-items: center;
+        padding: 20px 16px !important;
+    }
 
     
 }

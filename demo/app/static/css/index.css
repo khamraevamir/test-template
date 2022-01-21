@@ -22,9 +22,13 @@ body :is(h1, h2, h3, h4, h5, h6) {
 ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style-type: none ;
 }
 
+
+li {
+    list-style-type: none ;
+}
 
 a {
     text-decoration: none;
@@ -135,12 +139,12 @@ a {
 
 /* Ocean */
 .text-ocean {
-    color: var(--ocean--);
+    color: var(--ocean--) !important;
 }
 
 
 .text-dark-ocean {
-    color: var(--dark-ocean--);
+    color: var(--dark-ocean--) !important;
 }
 
 
@@ -176,6 +180,10 @@ a {
 }
 
 /* Background */
+
+.bg-white{
+    background: white;
+}
 
 /* Red */
 .bg-red {
@@ -548,10 +556,49 @@ a {
     border:1px solid  var(--light--);
 }
 
+.border-bottom-light {
+    border-bottom:1px solid  var(--light--);
+}
+
+
+.border-top-light {
+    border-top:1px solid  var(--light--);
+}
+
+
+.border-left-light {
+    border-left:1px solid  var(--light--);
+}
+
+
+.border-right-light {
+    border-right:1px solid  var(--light--);
+}
+
 
 .border-dark-light {
     border:1px solid  var(--dark-light--);
 }
+
+.border-bottom-dark-light {
+    border-bottom:1px solid  var(--dark-light--);
+}
+
+
+.border-top-dark-light {
+    border-top:1px solid  var(--dark-light--);
+}
+
+
+.border-left-dark-light {
+    border-left:1px solid  var(--dark-light--);
+}
+
+
+.border-right-dark-light {
+    border-right:1px solid  var(--dark-light--);
+}
+
 
 
 
@@ -2260,21 +2307,25 @@ a {
 
 .gap-1 {
     grid-gap:  1rem;
+    gap: 1rem;
 }
 
 
 .gap-2 {
     grid-gap:  2rem;
+    gap: 2rem;
 }
 
 
 .gap-3 {
     grid-gap:  3rem;
+    gap: 3rem;
 }
 
 
 .gap-4 {
     grid-gap:  4rem;
+    gap: 4rem;
 }
 
 
@@ -2625,6 +2676,10 @@ a {
 @media screen and (min-width: 0px) and (max-width: 576px) {
     
 
+.bg-sm-none {
+    background: none;
+}
+
 .d-sm-none {
     display: none !important;
 }
@@ -2635,12 +2690,18 @@ a {
 }
 
 
+.flex-sm-wrap {
+    flex-wrap: wrap;
+}
+
+
 /* Top navigator */
 .top_navigator {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background: var(--dark-ocean--);
+
     display: flex;
     padding: 8px 16px;
     align-items: center;
@@ -2657,7 +2718,7 @@ a {
 .top_navigator .logo_content .logo {
     color: #fff;
     display: flex;
-    height: 50px;
+    height: 60px;
     align-items: center;
     width: 100%;
     opacity: 1;
@@ -2690,10 +2751,10 @@ a {
     left: 90%;
     color: #fff;
     font-size: 25px;
-    height: 50px;
+    height: 60px;
     width: 50px;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
     transform: translateX(-50%);
     transition: all 0.4s ease;
 }
@@ -2830,6 +2891,7 @@ a {
     transition: all 0.4 ease;
     border-radius: 12px;
     white-space: nowrap;
+  
 }
 
 
@@ -2976,7 +3038,7 @@ a {
 .home_content {
     position: absolute;
     width: 100%;
-    
+    padding-top: 60px;
     left: 0;
     transition: all 0.5s ease;
     z-index: -9;

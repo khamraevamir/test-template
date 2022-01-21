@@ -52,3 +52,7 @@ def sign_up(request):
     else:
         form = CustomUserCreationForm()
         return render(request, 'pages/sign_up.html', {'form':form})
+
+
+def settings(request):
+    return render(request, 'pages/settings/index.html')
