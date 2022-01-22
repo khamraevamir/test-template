@@ -1,0 +1,31 @@
+<div class=" bg-white rounded-1 p-4 p-sm-0 ">
+    <h2 class="mt-0">Настройки</h2>
+    <div class=" ">
+        <ul class="p-2 d-flex flex-sm-wrap rounded-1 shadow-1   ">
+            <li class="mr-3" >
+                <a class=" fs-15 b-1  text-dark-ocean {% if request.path == '/user-data/' %} active {% endif %}"  href="{% url 'user_data' %}"> 
+                    <i class='bx bx-data mr-3'></i> 
+                    Личные данные
+                </a>
+            </li>
+            <li class="mr-3" >
+                <a class="fs-15 b-1    text-dark-ocean "  href="">
+                    <i class='bx bx-user-pin mr-3'></i>
+                    Поменять логин
+                </a>
+            </li>
+                <li class="mr-3" >
+                <a class="fs-15 b-1    text-dark-ocean "  href="">
+                    <i class='bx bx-edit mr-3'></i>
+                    Поменять пароль
+                </a>
+            </li>
+            <li class="" >
+                <a class="fs-15 b-1    text-dark-ocean "  href="">
+                    <i class='bx bx-log-out mr-3'></i>
+                    Выйти
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+    <div class="bg-light p-4 min-vh-100">
+        <div class="bg-white p-4 rounded">
+            <h2>Сотрудники</h2>
+            <table class="table">
+                <thead class="bg-ocean text-light">
+                    <tr>
+                        <td>Name</td>
+                        <td>Payment</td>
+                        <td>Group</td>
+                        <td>Address</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="user-hover">
+                        <td>
+                            <a href="">Amir Khamraev</a>
+                        </td>
+                        <td>1000$</td>
+                        <td>3</td>
+                        <td>Ark</td>
+                    </tr>
+                    <tr id="user-hover">
+                        <td>
+                            <a href="">Ravshan</a>
+                        </td>
+                        <td>500$</td>
+                        <td>3</td>
+                        <td>Sharq-2 Fathobod str</td>
+                    </tr>
+                    <tr id="user-hover">
+                        <td>
+                            <a href="">Ravshan</a>
+                        </td>
+                        <td>500$</td>
+                        <td>3</td>
+                        <td>Sharq-2 Fathobod str</td>
+                    </tr>
+                    <tr id="user-hover">
+                        <td>
+                            <a href="">Ravshan</a>
+                        </td>
+                        <td>500$</td>
+                        <td>3</td>
+                        <td>Sharq-2 Fathobod str</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+
+{% endblock %}

@@ -94,45 +94,40 @@
 /* Settings */
 
 
-
-.settings-page .left {
-    width: 22%;
+.settings-page ul a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: var(--light--);
+    border: 1px solid transparent;
 }
 
-.settings-page .right {
-    width: 78%;
+
+.settings-page ul a:hover {
+    border: 1px solid var(--dark-light--);
 }
 
-.settings-page .settings-sidebar li .active {
+
+.settings-page ul li .active {
     background: var(--ocean--) !important;
     color: var(--light--) !important;
 }
 
 
-.settings-page .settings-sidebar li a {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
+/* Workers */
+
+
+#user-hover{
+    cursor: pointer;
 }
 
-.settings-page .settings-sidebar li:first-child a {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+#user-hover a{
+    color: var(--dark-ocean--);
 }
 
-
-.settings-page .settings-sidebar li:last-child a {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+#user-hover:hover{
+    background-color: var(--light--);
 }
-
-.settings-page .settings-sidebar li a:hover{
-    background: var(--light--);
-}
-
-
-
-
 
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
@@ -143,10 +138,17 @@
     }
 
 
-    .settings-page .settings-sidebar li a {
+    .settings-page ul li {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+
+    .settings-page ul li a {
         display: flex;
         align-items: center;
         padding: 20px 16px !important;
+        width: 100%;
     }
 
     
