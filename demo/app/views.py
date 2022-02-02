@@ -60,6 +60,3 @@ def settings(request):
 def user_data(request):
     return render(request, 'pages/settings/data.html')
 
-
-def workers(request):
-    return render(request, 'pages/workers.html')

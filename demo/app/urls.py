@@ -12,5 +12,4 @@ urlpatterns = [
     path('settings/', views.settings, name='settings'),
     path('user-data/', views.user_data, name='user_data'),
 
-    path('workers/', views.workers, name='workers'),
 ]
