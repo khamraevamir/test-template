@@ -44,55 +44,17 @@
                 </a>
                 <span class="tooltip">Главная</span>
             </li>
-            <li>
-                <a href=''>
-                    <i class='bx bx-user' ></i>
-                    <span class="links_name">Пользователи</span>
-                </a>
-                <span class="tooltip">Пользователи</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-chat' ></i>
-                    <span class="links_name">Сообщения</span>
-                </a>
-                <span class="tooltip">Сообщения</span>
-            </li>
-            <!-- <li>
-                <a href="">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="links_name">Analytics</span>
-                </a>
-                <span class="tooltip">Analytics</span>
-            </li> -->
-            <!-- <li>
-                <a href="">
-                    <i class='bx bx-folder'></i>
-                    <span class="links_name">File Manager</span>
-                </a>
-                <span class="tooltip">Files</span>
-            </li> -->
-            <!-- <li>
-                <a href="">
-                    <i class='bx bx-cart-alt'></i>
-                    <span class="links_name">Order</span>
-                </a>
-                <span class="tooltip">Order</span>
-            </li> -->
-            <!-- <li>
-                <a href="">
-                    <i class='bx bx-heart' ></i>
-                    <span class="links_name">Saved</span>
-                </a>
-                <span class="tooltip">Saved</span>
-            </li> -->
-            <li>
+          
+           
+           {% if user.is_authenticated %}
+           <li>
                 <a href="{% url 'settings' %}" class="{% if request.path == '/settings/' %} bg-white text-dark-ocean {% endif %}">
                     <i class='bx bx-cog ' ></i>
                     <span class="links_name {% if request.path == '/settings/' %}  text-ocean {% endif %}">Настройки</span>
                 </a>
                 <span class="tooltip">Настройки</span>
             </li>
+           {% endif %}
             
        </ul>
        <div class="profile-content">
