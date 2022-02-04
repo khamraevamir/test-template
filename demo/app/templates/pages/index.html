@@ -7,9 +7,28 @@
 
   <div class="bg-light p-4 px-sm-3 min-vh-100">
       <div class="bg-white  p-4 rounded-1">
-         <h2 class="mt-0">Главная</h2>
+         <div class="d-flex align-items-center">
+            <h2 class="mt-0 mr-4">Главная</h2>
+            <h4 class="mt-0">Корзина 
+               <sup class="cart_quant">
+                  <span class="cart_quant_val">{{cart.count}}</span>
+               </sup>
+            </h4>
+         </div>
+         <div class="hr-dark-light"></div>
          
-         
+         <div class="grid-4 gap-2">
+            {% for product in products %}
+               <div class="rounded-1 border-night box d-flex flex-column align-items-center justify-content-center">
+                  <h3>{{product.name}}</h3>
+                  <h3 class="mt-0">{{product.price}}$</h3>
+                  <input class="input w-25" type="number">
+                  <div class="hr-dark-light"></div>
+                  <button data-url="{% url 'addToCart' %}" data-id="{{product.id}}" class="addToCart btn btn-blue rounded-1 mb-3">Add To Cart</button>
+                  
+               </div>
+            {% endfor %}
+         </div>
       </div>
 
    

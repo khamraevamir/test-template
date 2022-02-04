@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+   <!-- Main -->
+
+  <div class="bg-light p-4 px-sm-3 min-vh-100">
+      <div class="bg-white  p-4 rounded-1">
+         <h2 class="mt-0">Корзина</h2>
+         <div class="hr-dark-light"></div>
+         
+         {% if cart %}
+            <div class="grid-1 gap-2">
+                {% for item in cart %}
+                <div class="rounded-1 border-night box d-flex flex-column align-items-center justify-content-center">
+                    <h2>{{item.product.name}}</h2>
+                    <h4 class="mt-0">Price: {{item.product.price}}$</h4>
+                    <h4 class="mt-0">Quantity: {{item.quantity}}</h4>
+                 
+                    <button class="btn btn-red rounded-1 mb-3">Remove</button>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h3>Ваша корзина пустая</h3>
+        {% endif %}
+      </div>
+
+   
+  </div>
+
+{% endblock %}

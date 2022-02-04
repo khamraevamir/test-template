@@ -13,3 +13,15 @@ class Product(models.Model):
 
     def __str__(self) :
         return self.name
+
+
+class Cart(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Product', related_name='cart_products')
+    quantity = models.IntegerField('Quantity', default=0)
+
+    class Meta:
+        verbose_name = 'Cart'
+        verbose_name_plural = "Cart"
+
+    def __str__(self) :
+        return self.product.name

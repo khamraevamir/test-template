@@ -1,12 +1,42 @@
+from statistics import quantiles
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from users.forms import CustomUserCreationForm
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 from users.forms import CustomUserCreationForm
+from . models import Product, Cart
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
-    return render(request, 'pages/index.html')
+    products = Product.objects.order_by('-id')
+    cart = Cart.objects.all()
+    return render(request, 'pages/index.html', {'products':products, 'cart':cart})
+
+
+def cartItem(request):
+    cart = Cart.objects.order_by('-id')
+    return render(request, 'pages/cart.html', {'cart':cart})
+
+
+@csrf_exempt
+def addToCart(request):
+    product_id = request.POST.get('id')
+    quantity = int(request.POST.get('quantity'))
+    product = Product.objects.get(id=product_id)
+    if Cart.objects.filter(product=product).exists():
+        cartItem = Cart.objects.get(product=product)
+        cartItem.quantity = cartItem.quantity + quantity
+        cartItem.save()
+
+        return HttpResponse(product.name + ' added')
+    else:
+        cartItem = Cart()
+        cartItem.product = product
+        cartItem.quantity = quantity
+        cartItem.save()
+
+        return HttpResponse(product.name + ' new')
 
 
 def sign_in(request):
